@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #f5d3cf
+}
+
+#logo{
+  height: 20vh;
+  text-align: center;
+  background-color: cornflowerblue;
+}
