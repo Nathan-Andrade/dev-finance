@@ -45,7 +45,7 @@ main #balance{
   margin-top: 0;
 }
 
-/* Cards */
+/* Cards - Card que mostra os valores */
 .card{
   background: white;
   padding: 1.5rem 2rem;
@@ -73,7 +73,7 @@ main #balance{
 }
 
 
-/* Table */
+/* Table - Tabela das financas */
 #data-table{
   width: 100%;
   border-spacing: 0 0.5rem;
@@ -122,7 +122,7 @@ td.expense{
   color: #e92929;
 }
 
-/* Footer */
+/* Footer - Rodapé da página */
 footer{
   text-align: center;
   padding: 4rem 0 2rem;
