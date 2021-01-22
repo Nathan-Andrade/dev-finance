@@ -11,6 +11,10 @@ body{
   font-family:'Poppins', sans-serif;
 }
 
+html{
+  font-size: 93.75%;
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -35,6 +39,21 @@ h2{
   color: var(--color-dark);
 
   font-weight: normal;
+}
+
+/* Links and buttons */
+a{
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.button.new{
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
+a:hover{
+  color: #49aa26;
 }
 
 /* Header */
@@ -92,14 +111,22 @@ main #balance{
 
 /* Table - Tabela das financas */
 #data-table{
+  display: block;
   width: 100%;
   border-spacing: 0 0.5rem;
   color: #969cb3;
+
+  overflow-x: auto; 
 }
 
 table thead tr th:first-child, 
 table tbody tr td:first-child{
   border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child, 
+table tbody tr td:last-child{
+  border-radius:  0 0.25rem 0.25rem 0;
 }
 
 table th{
@@ -146,4 +173,17 @@ footer{
   color: var(--color-dark);
 
   opacity: 0.6;
+}
+
+/* Responsive */
+@media (min-width: 800px){
+  html{
+    font-size: 87.5%;
+  }
+
+  #balance{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
