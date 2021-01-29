@@ -44,3 +44,18 @@ const Transaction = {
 
   }
 }
+
+const DOM = {
+  innerHTMLTransaction() {
+    const html = `
+      <tr>
+        <td class="description">Luz</td>
+        <td class="expense">- R$ 500,00</td>
+        <td class="date">23/01/2021</td>
+        <td>
+          <img src="./assets/minus.svg" alt="Remover transação">
+        </td>
+      </tr>
+    `
+  }
+}
