@@ -107,6 +107,10 @@ const DOM = {
 }
 
 const Utils = {
+  formatAmount(value){
+    
+  },
+
   formatCurrency(value){
     const signal = Number(value) < 0 ? "-" : ""
 
@@ -143,12 +147,19 @@ const Form = {
       throw new Error("Por favor, preencha todos os campos")
     }
   },
+
+  formatValues(){
+    let { description, amount, date } = Form.getValues()
+
+    amount = Utils.formatAmount()
+  },
   submit(event){
     event.preventDefault()
 
     try{
       Form.validateFields()
       //verificar se todas as informações foram preenchidas
+      Form.formatValues()
 
     } catch (error){
       alert(error.message)
