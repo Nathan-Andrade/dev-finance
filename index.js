@@ -31,13 +31,13 @@ const Transaction = {
   add(transaction){
     Transaction.all.push(transaction)
 
-    App.reload()
+    App.reload();
   },
 
   remove(index){
     Transaction.all.splice(index, 1)
 
-    App.reload()
+    App.reload();
   },
 
   //somar as entradas
