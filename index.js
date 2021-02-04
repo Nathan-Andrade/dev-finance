@@ -1,3 +1,40 @@
+
+// Light/Dark Mode
+const html = document.querySelector('html')
+const checkbox = document.querySelector('input[name=theme]')
+
+const getStyle = (element, style) => 
+  window.getComputedStyle(element).getPropertyValue(style)
+
+  const initialColors = {
+    lightBlue: getStyle(html, "--light-blue"),
+    colorDark: getStyle(html, "--color-dark"),
+    green: getStyle(html, "--green"),
+    lightGreen: getStyle(html, "--light-green"),
+    red: getStyle(html, "--red"),
+    pessegoColor: getStyle(html, "--pessego-color")
+  }
+
+  const darkMode = {
+    colorDark: "#8257E6",
+    lightBlue: "#7300DA",
+    pessegoColor: "#969cb3"
+  }
+
+  const transformKey = key => 
+    "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+
+  const changeColors = (colors) => {
+    Object.keys(colors).map(key => 
+      html.style.setProperty(transformKey(key), colors[key])
+    )
+  }
+
+  checkbox.addEventListener("change", ({target}) => {
+    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+  })
+
+
 const Modal = {
   //abrir modal/ open modal
   open(){

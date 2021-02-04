@@ -1,9 +1,5 @@
 :root{
-  --light-blue: #6495ed;
-  --color-dark: #363f5f;
-  --green: #49aa26;
-  --light-green: #3dd705;
-  --red: #e92929;
+  
 }
 *{
   margin: 0;
@@ -11,12 +7,18 @@
   box-sizing: border-box;
 }
 body{
-  background: #f5d3cf;
+  background: var(--pessego-color);
   font-family:'Poppins', sans-serif;
 }
 
 html{
   font-size: 93.75%;
+  --light-blue: #6495ed;
+  --color-dark: #363f5f;
+  --green: #49aa26;
+  --light-green: #3dd705;
+  --red: #e92929;
+  --pessego-color: #f5d3cf;
 }
 
 .sr-only{
@@ -109,6 +111,49 @@ header{
   font-weight: 100;
 }
 
+/* Header - Input checkbox */
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label{
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after{
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background-color: var(--color-dark);
+}
+
+input:checked + label::after{
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after{
+  width: 45px;
+}
+
 /* Balance */
 main #balance{
   margin-top: -8rem;
@@ -126,7 +171,7 @@ main #balance{
   border-radius: 0.25rem;
 
   margin-bottom: 2rem;
-  color: #363f5f
+  color: var(--color-dark);
 }
 
 .card h3{
@@ -208,7 +253,7 @@ td.income{
 }
 
 td.expense{
-  color: #e92929;
+  color: var(--red);
 }
 
 /* Modal */
