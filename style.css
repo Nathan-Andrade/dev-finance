@@ -328,16 +328,30 @@ td.expense{
 /* Message positive/negative */
 .positive{
   background-color: var(--light-green);
+  width: 25rem;
+  height: 3.35rem;
+
+  align-items: center;
+  justify-content:center;
+
 }
 .positive h2{
   color: white;
+
+ 
+
+  text-align: center;
 }
 
 .negative{
   background-color: var(--red);
+  width: 25rem;
+  height: 3.35rem;
 }
 .negative h2{
   color: white;
+
+  text-align: center;
 }
 
 /* Footer - Rodapé da página */
