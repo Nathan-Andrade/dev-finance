@@ -51,7 +51,13 @@ const positive = document.querySelector('positive');
 const negative = document.querySelector('negative');
 
 const Message = {
-  
+  valueMessage(value, index){
+    if(value.amount > 0){
+      return positive
+    } else{
+      return negative
+    }
+  }
 }
 
 
@@ -226,6 +232,8 @@ const Form = {
       const transaction =  Form.formatValues()
 
       Transaction.add(transaction)
+
+      Message.valueMessage()
 
       Form.clearFields()
 

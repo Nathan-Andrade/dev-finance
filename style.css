@@ -328,6 +328,8 @@ td.expense{
 /* Message positive/negative */
 #message{
   position: relative;
+
+  visibility: hidden;
   
 }
 
