@@ -326,6 +326,11 @@ td.expense{
 }
 
 /* Message positive/negative */
+#message{
+  position: relative;
+  
+}
+
 .positive{
   background-color: var(--light-green);
   width: 25rem;
@@ -337,9 +342,6 @@ td.expense{
 }
 .positive h2{
   color: white;
-
- 
-
   text-align: center;
 }
 
@@ -350,7 +352,6 @@ td.expense{
 }
 .negative h2{
   color: white;
-
   text-align: center;
 }
 

@@ -46,6 +46,15 @@ const Modal = {
   }
 }
 
+// abrir mensagem se a transacao é positiva/negativa
+const positive = document.querySelector('positive');
+const negative = document.querySelector('negative');
+
+const Message = {
+  
+}
+
+
 const Storage = {
   get(){
     return JSON.parse(localStorage.getItem("dev.finances:transactions")) || []
