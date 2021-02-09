@@ -20,7 +20,8 @@
  Dev.Finance$ é um projeto desenvolvido com o propósito de ajudar o Dev a ter um modelo de carteira virtual que lhe permite identificar quanto teve de entrada e saída, sem contar no total de quanto ele tem no final das contas.
 
  <p align="center">
-  <img src="" >
+ <h3>Light/Dark Mode</h3>
+  <img src="https://github.com/Nathan-Andrade/dev-finance/blob/master/github-pictures/gifDevFinance$.gif?raw=true" >
   <img src="" >
 </p>
 
