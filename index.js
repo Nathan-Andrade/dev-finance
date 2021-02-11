@@ -46,20 +46,6 @@ const Modal = {
   }
 }
 
-// abrir mensagem se a transacao é positiva/negativa
-const positive = document.querySelector('positive');
-const negative = document.querySelector('negative');
-
-const Message = {
-  valueMessage(value, index){
-    if(value.amount > 0){
-      return positive
-    } else{
-      return negative
-    }
-  }
-}
-
 
 const Storage = {
   get(){
@@ -148,6 +134,8 @@ const DOM = {
     document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total());
   },
 
+  
+
   clearTransactions() {
     DOM.transactionsContainer.innerHTML = ""
   }
@@ -217,6 +205,8 @@ const Form = {
     }
   },
 
+  
+
   clearFields(){
     Form.description.value = ""
     Form.amount.value = ""
@@ -233,7 +223,7 @@ const Form = {
 
       Transaction.add(transaction)
 
-      Message.valueMessage()
+      //Form.valueMessage()
 
       Form.clearFields()
 
@@ -268,6 +258,19 @@ const App = {
     DOM.clearTransactions()
     App.init()
   },
+}
+
+// abrir mensagem se a transacao é positiva/negativa
+document.getElementByid('#save').click(function(){
+  go(50)
+});
+
+setTimeout(function(){go(50)},700);
+
+function valueMessage(nr){
+  $('.message').toggleClass('comein');
+  $('.check').toggleClass('sacledown');
+  $('#save').fadeToggle(nr);
 }
 
 App.init();

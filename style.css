@@ -326,27 +326,57 @@ td.expense{
 }
 
 /* Message positive/negative */
-#message{
-  position: relative;
-
-  visibility: hidden;
-  
+.message{
+  position: absolute;
+  top: 130px;
+  left: 20%;
+  transform: translate(-5%, 0%);
+  width: 350px;
+  background-color: #46C590;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  color: #09462d;
+  font-weight: 500;
+  transition: left 0.3s cubic-bezier(.31,.25,.50,1.50), 
+  opacity 0.2s ease-in-out 
+}
+.message.check{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(4);
+  width: 120px;
+  height: 110px;
+  background: #71c341;
+  color: white;
+  font-size: 3.8rem;
+  padding-top: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: transform 0.2s 0.25s cubic-bezier(.31,.25,.50,1.50), opacity 0.1s 0.25s ease-in-out
 }
 
-.positive{
-  background-color: var(--light-green);
-  width: 25rem;
-  height: 3.35rem;
+.message p{
+  font-size: 1.1rem;
+  margin: 10px 0px;
+  padding: 0;
+}
+
+/*
+.check{
+  
 
   align-items: center;
   justify-content:center;
 
 }
-.positive h2{
-  color: white;
+.check p{
+  color: rgb(38, 136, 8);
   text-align: center;
-}
+}*/
 
+/*
 .negative{
   background-color: var(--red);
   width: 25rem;
@@ -355,6 +385,27 @@ td.expense{
 .negative h2{
   color: white;
   text-align: center;
+}*/
+
+@keyframes progress-animation{
+  from { width: 100% }
+  to { width: 0% }
+}
+.progress{
+  width: 350px;
+  height: 15px;
+  background-color: #3ca378;
+
+  left: -4.5%;
+  top: 15px;
+  position: relative;
+  border-radius: 8px 0px 8px 0px;
+}
+.progress .progress-bar{
+  position: absolute;
+  height: 100%;
+  background-color: #46C590;
+  animation: progress-animation 6s infinite;
 }
 
 /* Footer - Rodapé da página */
