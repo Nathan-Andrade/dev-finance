@@ -34,6 +34,23 @@ const getStyle = (element, style) =>
     target.checked ? changeColors(darkMode) : changeColors(initialColors)
   })
 
+// abrir mensagem se a transacao é positiva/negativa
+
+const toasts = document.querySelectorAll('.message');
+const toastSave = document.querySelectorAll('.save');
+toastSave.forEach((save, index) => {
+  let toastTimeout;
+  save.addEventListener('click', () => {
+    toasts[index].classList.add('check');
+    toastTimeout = setTimeout(() => {
+      toasts[index].classList.remove('check');
+    }, 3500);
+  });
+  toasts[index].addEventListener('click', () => {
+    toasts[index].classList.remove('check');
+    clearTimeout(toastTimeout);
+  });
+});
 
 const Modal = {
   //abrir modal/ open modal
@@ -260,17 +277,7 @@ const App = {
   },
 }
 
-// abrir mensagem se a transacao é positiva/negativa
-document.getElementByid('#save').click(function(){
-  go(50)
-});
 
-setTimeout(function(){go(50)},700);
 
-function valueMessage(nr){
-  $('.message').toggleClass('comein');
-  $('.check').toggleClass('sacledown');
-  $('#save').fadeToggle(nr);
-}
 
 App.init();

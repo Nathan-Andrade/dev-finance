@@ -338,8 +338,16 @@ td.expense{
   text-align: center;
   color: #09462d;
   font-weight: 500;
+  visibility: hidden;
   transition: left 0.3s cubic-bezier(.31,.25,.50,1.50), 
   opacity 0.2s ease-in-out 
+  
+}
+.message--active{
+  display: -webkit-box;
+  display: flex;
+  -webkit-animation: slidein--bottom 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: slidein--bottom 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 .message.check{
   position: absolute;
@@ -354,13 +362,30 @@ td.expense{
   padding-top: 10px;
   border-radius: 50%;
   opacity: 0;
-  transition: transform 0.2s 0.25s cubic-bezier(.31,.25,.50,1.50), opacity 0.1s 0.25s ease-in-out
+  transition: transform 0.2s 0.25s cubic-bezier(.31,.25,.50,1.50), opacity 0.1s 0.25s ease-in-out;
+  visibility: visible;
 }
 
 .message p{
   font-size: 1.1rem;
   margin: 10px 0px;
   padding: 0;
+}
+
+.message--visible{
+  top: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.message--success{
+  background: #00c02b;
+  color: #fff;
+}
+
+.message-error{
+  background: #d50000;
+  color: #fff;
 }
 
 /*
