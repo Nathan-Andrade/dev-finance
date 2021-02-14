@@ -44,7 +44,7 @@ toastSave.forEach((save, index) => {
     toasts[index].classList.add('check');
     toastTimeout = setTimeout(() => {
       toasts[index].classList.remove('check');
-    }, 3500);
+    }, 6000);
   });
   toasts[index].addEventListener('click', () => {
     toasts[index].classList.remove('check');
