@@ -34,23 +34,7 @@ const getStyle = (element, style) =>
     target.checked ? changeColors(darkMode) : changeColors(initialColors)
   })
 
-// abrir mensagem se a transacao é positiva/negativa
 
-const toasts = document.querySelectorAll('.message');
-const toastSave = document.querySelectorAll('.save');
-toastSave.forEach((save, index) => {
-  let toastTimeout;
-  save.addEventListener('click', () => {
-    toasts[index].classList.add('check');
-    toastTimeout = setTimeout(() => {
-      toasts[index].classList.remove('check');
-    }, 6000);
-  });
-  toasts[index].addEventListener('click', () => {
-    toasts[index].classList.remove('check');
-    clearTimeout(toastTimeout);
-  });
-});
 
 const Modal = {
   //abrir modal/ open modal
@@ -222,7 +206,9 @@ const Form = {
     }
   },
 
-  
+  message(){
+    
+  },
 
   clearFields(){
     Form.description.value = ""
@@ -240,12 +226,12 @@ const Form = {
 
       Transaction.add(transaction)
 
-      //Form.valueMessage()
-
+      
       Form.clearFields()
-
+      
       Modal.close()
-
+      
+      Message.message()
       App.reload();
 
     } catch (error){
@@ -257,7 +243,25 @@ const Form = {
   }
 }
 
+const Message = {
+  // abrir mensagem se a transacao é positiva/negativa
+  message(){
+    $('button').click(function(){
+      $('.alert').addClass('show');
+      $('.alert').removeClass('hide');
+      $('.alert').addClass('showAlert');
+      setTimeout(function(){
+        $('.alert').removeClass('show');
+        $('.alert').addClass('hide');
+      }, 5000);
+    })
 
+    $('.close-btn').click(function(){
+      $('.alert').removeClass('show');
+      $('.alert').addCLass('hide');
+    })
+  }   
+}
 
 const App = {
   init(){
