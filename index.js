@@ -206,10 +206,6 @@ const Form = {
     }
   },
 
-  message(){
-    
-  },
-
   clearFields(){
     Form.description.value = ""
     Form.amount.value = ""
@@ -226,12 +222,10 @@ const Form = {
 
       Transaction.add(transaction)
 
-      
       Form.clearFields()
       
       Modal.close()
-      
-      Message.message()
+
       App.reload();
 
     } catch (error){
@@ -241,6 +235,25 @@ const Form = {
    
 
   }
+}
+
+
+const App = {
+  init(){
+    
+    Transaction.all.forEach(function (transaction, index) {
+      DOM.addTransaction(transaction, index)
+    })
+    
+    DOM.updateBalance();
+    
+    Storage.set(Transaction.all)
+  },
+  
+  reload() {
+    DOM.clearTransactions()
+    App.init()
+  },
 }
 
 const Message = {
@@ -260,28 +273,20 @@ const Message = {
       $('.alert').removeClass('show');
       $('.alert').addCLass('hide');
     })
+
+    const error = document.querySelector('.error-msg')
+
+    if(Form.getValues.amount > 0){
+     return Message;
+    } else {
+      return error;
+    }
   }   
+
+  
 }
-
-const App = {
-  init(){
-
-    Transaction.all.forEach(function (transaction, index) {
-      DOM.addTransaction(transaction, index)
-    })
-    
-    DOM.updateBalance();
-
-    Storage.set(Transaction.all)
-  },
-
-  reload() {
-    DOM.clearTransactions()
-    App.init()
-  },
-}
-
 
 
 
 App.init();
+Message.message();

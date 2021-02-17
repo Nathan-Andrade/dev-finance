@@ -390,6 +390,13 @@ td.expense{
   font-size: 18px;
   color: #ffffff;
 }
+.alert .error-msg{
+  padding: 0 20px;
+  font-size: 18px;
+  background: #c53030;
+  color: white;
+}
+
 .alert .close-btn{
   position: absolute;
   right: 0px;
@@ -408,6 +415,7 @@ td.expense{
   font-size: 22px;
   line-height: 40px;
 }
+
 
 /*
 .check{
