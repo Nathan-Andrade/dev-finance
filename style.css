@@ -390,10 +390,23 @@ td.expense{
   font-size: 18px;
   color: #ffffff;
 }
-.alert .error-msg{
+
+.error-message{
+  background: #c53030;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  border-left: 8px solid #ffffff;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.error-msg{
   padding: 0 20px;
   font-size: 18px;
-  background: #c53030;
   color: white;
 }
 

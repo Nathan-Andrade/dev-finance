@@ -274,12 +274,12 @@ const Message = {
       $('.alert').addCLass('hide');
     })
 
-    const error = document.querySelector('.error-msg')
+    const error = document.querySelector('.error-message')
 
     if(Form.getValues.amount > 0){
-     return Message;
+      submit(); return Message
     } else {
-      return error;
+     submit(); return error
     }
   }   
 
