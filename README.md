@@ -15,7 +15,7 @@
 </p>
 
 
-## :computer: Projeto
+# :computer: Projeto
 
  Dev.Finance$ é um projeto desenvolvido com o propósito de ajudar o Dev a ter um modelo de carteira virtual que lhe permite identificar quanto teve de entrada e saída, sem contar no total de quanto ele tem no final das contas.
 
@@ -23,7 +23,7 @@
   <img src="https://github.com/Nathan-Andrade/dev-finance/blob/master/github-pictures/home.PNG?raw=true" alt="home page">
 </p>
 
-### :fire: Upgrades
+# :fire: Upgrades
  <p align="center">
  <h3>Light/Dark Mode</h3>
   <img src="https://github.com/Nathan-Andrade/dev-finance/blob/master/github-pictures/gifDevFinance$.gif?raw=true" alt="light & dark mode">
