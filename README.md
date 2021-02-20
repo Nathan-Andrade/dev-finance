@@ -25,10 +25,10 @@
 
 # :fire: Upgrades
  <p align="center">
- <h3>Light/Dark Mode</h3>
+ <h3>Light/Dark Mode ☀🌙</h3>
   <img src="https://github.com/Nathan-Andrade/dev-finance/blob/master/github-pictures/gifDevFinance$.gif?raw=true" alt="light & dark mode">
   <br>
-  <h3>PopUp Message</h3>
+  <h3>PopUp Message 📨</h3>
   <img src="https://github.com/Nathan-Andrade/dev-finance/blob/master/github-pictures/MessageDevFinanceCode.gif?raw=true" alt="message success">
 </p>
 
