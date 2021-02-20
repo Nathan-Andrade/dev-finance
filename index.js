@@ -274,6 +274,10 @@ const Message = {
       $('.alert').addCLass('hide');
     })
 
+    
+  },   
+  
+  changeMessage(){
     const error = document.querySelector('.error-message')
 
     if(Form.getValues.amount > 0){
@@ -281,7 +285,8 @@ const Message = {
     } else {
      submit(); return error
     }
-  }   
+
+  }
 
   
 }
@@ -290,3 +295,4 @@ const Message = {
 
 App.init();
 Message.message();
+Message.changeMessage();
